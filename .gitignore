@@ -1,0 +1,10 @@
+.deprecated
+*.m~
+*.mat
+*.csv
+temp 
+*.ipynb_checkpoints
+docs
+.DS_Store
+datasets 
+
