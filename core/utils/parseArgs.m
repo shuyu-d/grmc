@@ -1,8 +1,15 @@
 function params = parseArgs(param_name, varargin)
-    % Input argument parser 
-    % 
-    % param_name:   String like 'runTester', 'gdat', 'rdat', 'opt', 'infoMethods2',
-    %                   'infoMethods'
+% Parse input arguments based on default parameter pairs. 
+% 
+% Contact: Shuyu Dong (shuyu.dong@uclouvain.be), ICTEAM, UCLouvain.
+% 
+% Latest version: September, 2021.
+ 
+
+% Input argument parser 
+% 
+% param_name:   String used include 'runTester', 'gdat', 'rdat', 'opt', 'infoMethods2',
+%                   'infoMethods'
 
     DEFAULT.realdata = struct('use_submatrix', false,...
                               'dims_submatrix', [300,600]);

@@ -1,5 +1,18 @@
 function [output, t] = gen_graphlaplacian_from_features(feat, opts) 
-   
+% Generate graph Laplacian matrix from data features.
+%
+% Reference:
+% 
+% S. Dong, P.-A. Absil, and K. A. Gallivan. Riemannian gradient descent
+% methods for graph-regularized matrix completion. Linear Algebra and its Applications, 2020. 
+% DOI: https://doi.org/10.1016/j.laa.2020.06.010.
+% 
+% Contact: Shuyu Dong (shuyu.dong@uclouvain.be), ICTEAM, UCLouvain.
+% 
+% Latest version: September, 2021.
+ 
+
+
 % opts:     options containing fileds like 'methodname', 'epsNN_GaussianKernel_sigma', 'sparsity' 
    
     if nargin < 2

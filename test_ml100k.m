@@ -1,4 +1,15 @@
-
+% Example on the MovieLens-100k dataset. 
+%
+% Reference:
+% 
+% S. Dong, P.-A. Absil, and K. A. Gallivan. Riemannian gradient descent
+% methods for graph-regularized matrix completion. Linear Algebra and its Applications, 2020. 
+% DOI: https://doi.org/10.1016/j.laa.2020.06.010.
+% 
+% Contact: Shuyu Dong (shuyu.dong@uclouvain.be), ICTEAM, UCLouvain.
+% 
+% Latest version: September, 2021.
+ 
 clear; close all;  
 
 % Load the input data Mat from the MovieLens 100k dataset 
@@ -124,5 +135,26 @@ end
 xlabel('Time (seconds)'); 
 ylabel('gradnorm'); 
 legend(m_names); 
+
+%% Show performances of the solution 
+
+for i = 1 : 3
+    temp = struct(); 
+    temp = res{i}(end) ; 
+    temp.Alg = m_names{i}; 
+    tab_res(i,:) = struct2table(temp, 'AsArray',true); 
+end
+
+disp(tab_res(:,{'Alg', 'RMSE_tr','RMSE_t'})); 
+
+% Results from one random test are as follows
+%   
+%               Alg               RMSE_tr    RMSE_t
+%     ________________________    _______    _______
+% 
+%     {'Precon RGD (RBB)'    }    0.76267    0.95098
+%     {'Precon RCG (linemin)'}    0.76267    0.95098
+%     {'Precon RGD (linemin)'}     0.7633    0.95046
+
 
 
