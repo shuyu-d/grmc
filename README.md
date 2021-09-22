@@ -39,7 +39,12 @@ The following script contains an example on synthetic data:
 test_example.m  
 ```
 
-To test with a given real-world dataset, it suffices to make sure that the input matrix is a (sparse) matrix in the MATLAB format. 
+To test with real-world datasets, it suffices to make sure that the input matrix is a (sparse) matrix in the MATLAB format, and the graph Laplacian matrices and the regularization parameters are properly chosen. The following script contains an example on the MovieLens-100k dataset:  
+
+```matlab
+test_ml100k.m  
+```
+
 
 ### Requirements
 - `Manopt`: In this package, some manifold objects and utilities of Manopt (https://www.manopt.org/index.html) are used in the construction of the main problem class (`core/GRMC.m`). These Manopt functions are already included in `tools/manopt/`. 
